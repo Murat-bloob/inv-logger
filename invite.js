@@ -2,17 +2,17 @@ const { Collection, Client } = require("discord.js");
 const ayarlar = require('./ayarlar.json');
 const Database = require("./Helpers/Database");
 const client = new Client;
-////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-const Invites = new Collection();////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr v
-client.on("ready", () => {////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-    client.guilds.cache.forEach(guild => {////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr vvvv
-        guild.fetchInvites().then(_invites => {////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-            Invites.set(guild.id, _invites);////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr v
-        }).catch(err => { });////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr v////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr vvv
+                                                                                                                                                                                                    
+const Invites = new Collection();                                                                                                                
+                                                                                    v
+client.on("ready", () => {                                                                                    
+    client.guilds.cache.forEach(guild => {     
+        guild.fetchInvites().then(_invites => {                                                        
+            Invites.set(guild.id, _invites);                                          v
+        }).catch(err => { });             
     });
-  ////Elminstêr 
-  ///Elminstêr /Elminstêr Elminstêr 
+ 
+   
 });
 client.on("inviteCreate", (invite) => {
     var gi = Invites.get(invite.guild.id);
@@ -60,92 +60,92 @@ client.on("guildMemberAdd", (member) => {
             if(im) global.onUpdateInvite(im, guild.id, Number(total + Number(bonus)));
             
         }
-  ////Elminstêr 
+ 
 
         db.set(`invites.${member.id}.isfake`, fake);
 
         if(channel){
        //channel.send(`${member} Adlı Kişi Sunucuya Katıldı **Davet Eden Şahıs:** ${invite.inviter.tag} (**${total + bonus}** Davet! :white_check_mark:)`)
           // gİRİŞ MESAJLARI İÇİN 
-          ////Elminstêr 
+         
           content = content
-////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-            .replace("-member-", `${member}`)////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-            .replace("-target-", `${invite.inviter}`)////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-            .replace("-total-", `${total + bonus}`)////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-            .replace("-regular-", `${regular}`)////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-            .replace("-fakecount-", `${_fake}`)////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-            .replace("-invite-", `${invite && invite.code != undefined ? invite.code : "what is that?"}`)////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-            .replace("-fake-", `${fake}`);////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-            channel.send(content);////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-        }  ////Elminstêr ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-    }).catch();////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-});////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-////Elminstêr 
+              
+            .replace("-member-", `${member}`)              
+              
+            .replace("-target-", `${invite.inviter}`)              
+              
+            .replace("-total-", `${total + bonus}`)              
+              
+            .replace("-regular-", `${regular}`)              
+                            
+            .replace("-fakecount-", `${_fake}`)              
+              
+            .replace("-invite-", `${invite && invite.code != undefined ? invite.code : "what is that?"}`)              
+              
+            .replace("-fake-", `${fake}`);              
+              
+            channel.send(content);              
+        }               
+    }).catch();              
+});              
+              
+ 
 client.on("guildMemberRemove", (member) => {
     const db = new Database("./Servers/" + member.guild.id, "Invites"), settings = new Database("./Servers/" + member.guild.id, "Settings").get("settings") || {};
     var total = 0, bonus = 0, regular = 0, fakecount = 0, channel = member.guild.channels.cache.get(settings.Channel), content = settings.leaveMessage ? settings.leaveMessage : `${member} is left the server.`, data = db.get(`invites.${member.id}`);
     if(!data){
         return;
-    }////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
+    }              
         if(data === null) data = "Bulunamadı"
     if(data.isfake && data.inviter){
-        fakecount = db.sub(`invites.${data.inviter}.fake`, 1);////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-        total = db.sub(`invites.${data.inviter}.total`, 1);////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-    }////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-    else if(data.inviter){////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-        regular = db.sub(`invites.${data.inviter}.regular`, 1);////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-        total = db.sub(`invites.${data.inviter}.total`, 1);////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-    }////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
-    if(data.inviter) bonus = db.get(`invites.${data.inviter}.bonus`) || 0;////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
+        fakecount = db.sub(`invites.${data.inviter}.fake`, 1);              
+        total = db.sub(`invites.${data.inviter}.total`, 1);              
+    }              
+    else if(data.inviter){              
+        regular = db.sub(`invites.${data.inviter}.regular`, 1);              
+        total = db.sub(`invites.${data.inviter}.total`, 1);              
+    }              
+    if(data.inviter) bonus = db.get(`invites.${data.inviter}.bonus`) || 0;              
     
     var im = member.guild.member(data.inviter)
     if(im) global.onUpdateInvite(im, member.guild.id, Number(total) + Number(bonus));
 
     db.add(`invites.${data.inviter}.leave`, 1);
-       if(channel){  ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
+       if(channel){                 
 
         content = content
 
-        .replace("-member-", `${member}`)////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-        .replace("-target-", `${im ? im : data.inviter}`)////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-        .replace("-total-", `${Number(total) + Number(bonus)}`)////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-        .replace("-regular-", `${regular}`)////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-        .replace("-fakecount-", `${fakecount}`)////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-        .replace("-fake-", `${data.isfake}`);////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-        channel.send(content);////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
+        .replace("-member-", `${member}`)       
+         
+        .replace("-target-", `${im ? im : data.inviter}`)       
+                 
+        .replace("-total-", `${Number(total) + Number(bonus)}`)      
+      
+        .replace("-regular-", `${regular}`)      
+         
+        .replace("-fakecount-", `${fakecount}`)       
+       
+        .replace("-fake-", `${data.isfake}`);        
+       
+        channel.send(content);         
      //   let user = client.users.cache.get(data.inviter)
          /// mesaj ayarlamaları için yapıldı
      //	channel.send(`${member.user.tag} Sunucudan Ayrıldı **Şahsı Davet Eden:** ${user.tag} (**${Number(total) + Number(bonus)}** Davet! :x:)`)
      }
 });
-  ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
+           
 
-global.onUpdateInvite = (guildMember, guild, total) => {////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-    if(!guildMember.manageable) return;////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-    const rewards = new Database("./Servers/" + guild, "Rewards").get("rewards") || [];////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-    if(rewards.length <= 0) return;////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-    var taken = rewards.filter(reward => reward.Invite > total && guildMember.roles.cache.has(reward.Id));////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-    taken.forEach(take => {////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-        guildMember.roles.remove(take.Id);////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-    });////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-    var possible = rewards.filter(reward => reward.Invite <= total && !guildMember.roles.cache.has(reward.Id));////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-    possible.forEach(pos =>{////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-        guildMember.roles.add(pos.Id);////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-    });////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr 
-}////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr ////Elminstêr v
-client.login(ayarlar.token)  ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr   ////Elminstêr 
+global.onUpdateInvite = (guildMember, guild, total) => {     
+    if(!guildMember.manageable) return;        
+    const rewards = new Database("./Servers/" + guild, "Rewards").get("rewards") || [];           
+    if(rewards.length <= 0) return;        
+    var taken = rewards.filter(reward => reward.Invite > total && guildMember.roles.cache.has(reward.Id));      
+    taken.forEach(take => {      
+        guildMember.roles.remove(take.Id);       
+    });          
+    var possible = rewards.filter(reward => reward.Invite <= total && !guildMember.roles.cache.has(reward.Id));      
+    possible.forEach(pos =>{      
+        guildMember.roles.add(pos.Id);       
+    });        
+}       
+client.login(ayarlar.token)           
