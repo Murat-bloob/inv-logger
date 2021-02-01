@@ -80,7 +80,7 @@ client.on("guildMemberAdd", (member) => {
                             
             .replace("-fakecount-", `${_fake}`)              
               
-            .replace("-invite-", `${invite && invite.code != undefined ? invite.code : "what is that?"}`)              
+            .replace("-invite-", `${invite && invite.code != undefined ? invite.code : "bu nedir?"}`)              
               
             .replace("-fake-", `${fake}`);              
               
